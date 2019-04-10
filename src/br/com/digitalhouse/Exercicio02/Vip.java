@@ -3,9 +3,18 @@ package br.com.digitalhouse.Exercicio02;
 public abstract class Vip extends Ingresso{
 
     //Atributos
-    private float valorAdicional;
+    protected float valorAdicional;
 
     //Construtor
+    public Vip(float valorReais, float valorAdicional) {
+        super(valorReais);
+
+        this.valorAdicional = valorAdicional;
+    }
+
+    public Vip() {
+
+    }
 
     //Getter and Setter
     public float getValorAdicional() {

@@ -6,6 +6,15 @@ public abstract class Ingresso {
     protected float valorReais;
 
     //Construtor
+    public Ingresso(float valorReais){
+
+        this.valorReais = valorReais;
+
+    }
+
+    public Ingresso(){
+
+    }
 
     //Getter and Setter
     public float getValorReais() {
@@ -17,8 +26,6 @@ public abstract class Ingresso {
     }
 
     //Método imprimeValor
-    public void imprimeValor(){
-
-    }
+    public abstract void imprimeValor();
 
 }

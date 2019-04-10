@@ -1,5 +1,6 @@
 package br.com.digitalhouse.Exercicio02;
 
+import javax.xml.bind.annotation.adapters.NormalizedStringAdapter;
 import java.util.Scanner;
 
 public class Teste {
@@ -7,6 +8,17 @@ public class Teste {
     public static void main(String[] args) {
 
         Ingresso ingresso;
+
+        Normal ingressoNormal = new Normal(30.00f);
+
+        CamaroteSuperior ingressoVipCamaroteSuperior = new CamaroteSuperior(
+                30.00f,
+                100.00f);
+
+        CamaroteInferior ingressoVipCamaroteInferior = new CamaroteInferior(
+                40.00f,
+                10.00f,
+                "Arquibancada 8");
 
         Integer numero;
 
@@ -16,7 +28,9 @@ public class Teste {
         numero = scanner.nextInt();
 
         if ( numero == 1){//Normal
-            System.out.println("Ingresso normal");
+            //Imprimir valor do ingresso
+            ingressoNormal.imprimirIngressoNormal();
+            ingressoNormal.imprimeValor();
 
         } else if (numero == 2){ //VIP
             System.out.println("Ingresso VIP");
@@ -32,18 +46,14 @@ public class Teste {
             if (numeroCamarote == 1) { //Camarote Superior
                 System.out.println("Camarote superior");
 
-                CamaroteSuperior camaroteSuperior = new CamaroteSuperior();
-
                 //Imprimir o valor do ingresso
-                System.out.println("Valor do Ingresso:" + camaroteSuperior.consultarValorIngresso());
+                ingressoVipCamaroteSuperior.imprimeValor();
 
             } else if (numeroCamarote == 2){ //Camarote Inferior
                 System.out.println("Camarote inferior");
 
-                CamaroteInferior camaroteInferior = new CamaroteInferior();
-
                 //Imprimir o valor do ingresso
-                System.out.println("Valor do Ingresso:" + camaroteInferior.consultarValorIngressoVip());
+                ingressoVipCamaroteInferior.imprimeValor();
 
             } else { //Camarote inválido
                 System.out.println("Camarote inválido");
