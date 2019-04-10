@@ -6,7 +6,7 @@ public class Teste {
 
     public static void main(String[] args) {
 
-        Ingresso ingresso = new Ingresso();
+        Ingresso ingresso;
 
         Integer numero;
 
