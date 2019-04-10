@@ -1,4 +1,4 @@
-package br.com.digitalhouse;
+package br.com.digitalhouse.Exercicio01;
 
 public class Cliente extends Pessoa{
 
